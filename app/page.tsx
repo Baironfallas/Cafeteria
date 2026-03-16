@@ -1,22 +1,20 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
-import { Benefits } from "@/components/benefits"
-import { StorySection } from "@/components/story-section"
-import { Pricing } from "@/components/pricing"
-import { Testimonials } from "@/components/testimonials"
-import { NewsletterCta } from "@/components/newsletter-cta"
+import { SignatureCoffees } from "@/components/signature-coffees"
+import { Pastries } from "@/components/pastries"
+import { Membership } from "@/components/membership"
+import { OurStory } from "@/components/our-story"
 import { Footer } from "@/components/footer"
 
-export default function Home() {
+export default function Page() {
   return (
     <main>
       <Navbar />
       <Hero />
-      <Benefits />
-      <StorySection />
-      <Pricing />
-      <Testimonials />
-      <NewsletterCta />
+      <SignatureCoffees />
+      <Pastries />
+      <Membership />
+      <OurStory />
       <Footer />
     </main>
   )

@@ -3,12 +3,20 @@ import { DM_Sans, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" })
-const playfairDisplay = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" })
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-dm-sans',
+})
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+})
 
 export const metadata: Metadata = {
-  title: 'Coffee Lovers Club — Membresia Exclusiva de Cafe',
-  description: 'Descubre una experiencia unica de cafe con nuestra membresia mensual exclusiva. Granos premium, eventos especiales y una comunidad apasionada.',
+  title: 'Cafe Aura | Premium Coffee House',
+  description:
+    'Discover hand-roasted blends, artisan pastries, and exclusive monthly memberships at Cafe Aura. Crafted with passion for the ultimate coffee experience.',
   icons: {
     icon: [
       {
@@ -29,7 +37,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#5C3D2E',
+  themeColor: '#1C1917',
 }
 
 export default function RootLayout({
@@ -38,8 +46,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es">
-      <body className={`${dmSans.variable} ${playfairDisplay.variable} font-sans antialiased`}>
+    <html lang="es" className={`${dmSans.variable} ${playfair.variable}`}>
+      <body className="font-sans antialiased">
         {children}
         <Analytics />
       </body>
