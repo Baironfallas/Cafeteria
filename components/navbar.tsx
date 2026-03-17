@@ -1,24 +1,24 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Coffee, Menu, X } from "lucide-react"
-import Link from "next/link"
+import { useState } from "react";
+import { Coffee, Menu, X } from "lucide-react";
+import Link from "next/link";
 
 const navLinks = [
-  { label: "Inicio", href: "#hero" },
-  { label: "Menu", href: "#menu" },
-  { label: "Nuestra Historia", href: "#story" },
-  { label: "Contacto", href: "#contact" },
-]
+  { label: "Inicio", href: "/#hero" },
+  { label: "Menu", href: "/#menu" },
+  { label: "Nuestra Historia", href: "/historia" },
+  { label: "Contacto", href: "/#contact" },
+];
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
-        <Link href="#hero" className="flex items-center gap-2">
+        <Link href="/#hero" className="flex items-center gap-2">
           <Coffee className="h-6 w-6 text-accent" />
           <span className="font-serif text-xl font-bold tracking-tight text-foreground">
             {"Cafe Aura"}
@@ -41,7 +41,7 @@ export function Navbar() {
 
         {/* CTA */}
         <Link
-          href="#membership"
+          href="/#membership"
           className="hidden rounded-sm bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-accent hover:text-accent-foreground md:inline-block"
         >
           Reservar Mesa
@@ -74,7 +74,7 @@ export function Navbar() {
             ))}
             <li>
               <Link
-                href="#membership"
+                href="/#membership"
                 className="mt-2 inline-block rounded-sm bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
                 onClick={() => setIsOpen(false)}
               >
@@ -85,5 +85,5 @@ export function Navbar() {
         </div>
       )}
     </header>
-  )
+  );
 }

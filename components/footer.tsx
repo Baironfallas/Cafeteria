@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import { Coffee, MapPin, Mail, Phone, Clock } from "lucide-react"
-import Link from "next/link"
-import { useState } from "react"
+import { Coffee, MapPin, Mail, Phone, Clock } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 
 const quickLinks = [
-  { label: "Inicio", href: "#hero" },
-  { label: "Menu", href: "#menu" },
-  { label: "Nuestra Historia", href: "#story" },
-  { label: "Membresia", href: "#membership" },
-  { label: "Contacto", href: "#contact" },
-]
+  { label: "Inicio", href: "/#hero" },
+  { label: "Menu", href: "/#menu" },
+  { label: "Nuestra Historia", href: "/historia" },
+  { label: "Membresia", href: "/#membership" },
+  { label: "Contacto", href: "/#contact" },
+];
 
 export function Footer() {
-  const [email, setEmail] = useState("")
+  const [email, setEmail] = useState("");
 
   return (
     <footer id="contact" className="bg-primary text-primary-foreground">
@@ -87,8 +87,8 @@ export function Footer() {
             </p>
             <form
               onSubmit={(e) => {
-                e.preventDefault()
-                setEmail("")
+                e.preventDefault();
+                setEmail("");
               }}
               className="flex flex-col gap-3"
             >
@@ -120,5 +120,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

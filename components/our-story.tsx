@@ -1,11 +1,11 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
 const stats = [
   { value: "100%", label: "Organico" },
   { value: "24h", label: "Tostado Fresco" },
   { value: "50+", label: "Variedades" },
-]
+];
 
 export function OurStory() {
   return (
@@ -39,10 +39,9 @@ export function OurStory() {
               perfeccion.
             </p>
             <p className="text-base leading-relaxed text-muted-foreground">
-              Creemos en el arte de hacer cafe. Cada lote es tostado en
-              pequenas cantidades para resaltar las caracteristicas unicas de su
-              origen, asegurando que cada taza que pruebes cuente una historia
-              propia.
+              Creemos en el arte de hacer cafe. Cada lote es tostado en pequenas
+              cantidades para resaltar las caracteristicas unicas de su origen,
+              asegurando que cada taza que pruebes cuente una historia propia.
             </p>
 
             {/* Stats */}
@@ -60,7 +59,7 @@ export function OurStory() {
             </div>
 
             <Link
-              href="#"
+              href="/historia"
               className="mt-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-foreground transition-colors hover:text-accent"
             >
               {"Leer historia completa"}
@@ -70,5 +69,5 @@ export function OurStory() {
         </div>
       </div>
     </section>
-  )
+  );
 }
