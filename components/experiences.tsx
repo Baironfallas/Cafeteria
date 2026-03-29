@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-
 const experiences = [
   {
     id: 1,
@@ -58,7 +57,7 @@ export function Experiences() {
   const [count, setCount] = React.useState(0);
 
   const plugin = React.useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
+    Autoplay({ delay: 4000, stopOnInteraction: true }),
   );
 
   React.useEffect(() => {
@@ -81,10 +80,7 @@ export function Experiences() {
   }, [api]);
 
   return (
-    <section
-      id="experiences"
-      className="relative bg-muted/30 py-16 md:py-24"
-    >
+    <section id="experiences" className="relative bg-muted/30 py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mb-12 text-center">
