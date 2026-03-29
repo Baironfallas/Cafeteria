@@ -56,14 +56,23 @@ export function MenuPage() {
     { name: "Egg Mayo", price: "$4.00" },
   ];
 
-  const MenuColumn = ({ title, items }: { title: string; items: MenuItem[] }) => (
+  const MenuColumn = ({
+    title,
+    items,
+  }: {
+    title: string;
+    items: MenuItem[];
+  }) => (
     <div className="flex flex-col">
       <h3 className="font-serif text-2xl font-bold text-accent mb-6 border-b-2 border-accent/30 pb-3 tracking-tight">
         {title}
       </h3>
       <div className="space-y-3">
         {items.map((item, idx) => (
-          <div key={idx} className="flex justify-between items-baseline gap-4 group">
+          <div
+            key={idx}
+            className="flex justify-between items-baseline gap-4 group"
+          >
             <span className="text-foreground/80 font-serif text-sm md:text-base group-hover:text-accent transition-colors duration-300">
               {item.name}
             </span>
@@ -155,8 +164,9 @@ export function MenuPage() {
           </div>
 
           <p className="mt-8 text-center text-muted-foreground max-w-2xl leading-relaxed">
-            Cada bebida y postre es preparado con ingredientes premium y cuidado artesanal. Creemos que la experiencia 
-            comienza desde el primer sorbo.
+            Cada bebida y postre es preparado con ingredientes premium y cuidado
+            artesanal. Creemos que la experiencia comienza desde el primer
+            sorbo.
           </p>
         </div>
 
@@ -164,19 +174,35 @@ export function MenuPage() {
         <div className="bg-card rounded-2xl border border-border p-8 md:p-12">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="font-serif text-2xl font-bold text-foreground mb-4">Sobre Nuestro Menú</h3>
+              <h3 className="font-serif text-2xl font-bold text-foreground mb-4">
+                Sobre Nuestro Menú
+              </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Seleccionamos cuidadosamente cada café, té y postre para ofrecerte una experiencia inigualable. 
-                Todos nuestros ingredientes provienen de proveedores de confianza que comparten nuestro compromiso 
-                con la calidad.
+                Seleccionamos cuidadosamente cada café, té y postre para
+                ofrecerte una experiencia inigualable. Todos nuestros
+                ingredientes provienen de proveedores de confianza que comparten
+                nuestro compromiso con la calidad.
               </p>
             </div>
             <div>
-              <h3 className="font-serif text-2xl font-bold text-foreground mb-4">Horarios</h3>
+              <h3 className="font-serif text-2xl font-bold text-foreground mb-4">
+                Horarios
+              </h3>
               <ul className="space-y-2 text-muted-foreground">
-                <li><span className="font-semibold text-accent">Lunes - Viernes:</span> 7:00 AM - 9:00 PM</li>
-                <li><span className="font-semibold text-accent">Sábado:</span> 8:00 AM - 10:00 PM</li>
-                <li><span className="font-semibold text-accent">Domingo:</span> 8:00 AM - 8:00 PM</li>
+                <li>
+                  <span className="font-semibold text-accent">
+                    Lunes - Viernes:
+                  </span>{" "}
+                  7:00 AM - 9:00 PM
+                </li>
+                <li>
+                  <span className="font-semibold text-accent">Sábado:</span>{" "}
+                  8:00 AM - 10:00 PM
+                </li>
+                <li>
+                  <span className="font-semibold text-accent">Domingo:</span>{" "}
+                  8:00 AM - 8:00 PM
+                </li>
               </ul>
             </div>
           </div>
@@ -194,7 +220,9 @@ export function MenuPage() {
           <p className="text-muted-foreground">
             Centro Comercial Aura | 987 Calle Principal | Tu Ciudad
           </p>
-          <p className="text-accent font-semibold mt-2">hola@cafeaura.com | +1 (555) 123-4567</p>
+          <p className="text-accent font-semibold mt-2">
+            hola@cafeaura.com | +1 (555) 123-4567
+          </p>
 
           {/* Button Section */}
           <div className="mt-8 flex justify-center">
