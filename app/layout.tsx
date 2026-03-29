@@ -1,49 +1,49 @@
-import type { Metadata, Viewport } from 'next'
-import { DM_Sans, Playfair_Display } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
+import type { Metadata, Viewport } from "next";
+import { DM_Sans, Playfair_Display } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import "./globals.css";
 
 const dmSans = DM_Sans({
-  subsets: ['latin'],
-  variable: '--font-dm-sans',
-})
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+});
 
 const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-playfair',
-})
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
 
 export const metadata: Metadata = {
-  title: 'Cafe Aura | Premium Coffee House',
+  title: "Cafe Aura | Premium Coffee House",
   description:
-    'Discover hand-roasted blends, artisan pastries, and exclusive monthly memberships at Cafe Aura. Crafted with passion for the ultimate coffee experience.',
+    "Discover hand-roasted blends, artisan pastries, and exclusive monthly memberships at Cafe Aura. Crafted with passion for the ultimate coffee experience.",
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
+        url: "/icon-light-32x32.pn",
+        media: "(prefers-color-scheme: light)",
       },
       {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
+        url: "/icon-dark-32x32.pn",
+        media: "(prefers-color-scheme: dark)",
       },
       {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: "/icon.sv",
+        type: "image/svg+xml",
       },
     ],
-    apple: '/apple-icon.png',
+    apple: "/apple-icon.pn",
   },
-}
+};
 
 export const viewport: Viewport = {
-  themeColor: '#1C1917',
-}
+  themeColor: "#1C1917",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="es" className={`${dmSans.variable} ${playfair.variable}`}>
@@ -52,5 +52,5 @@ export default function RootLayout({
         <Analytics />
       </body>
     </html>
-  )
+  );
 }
