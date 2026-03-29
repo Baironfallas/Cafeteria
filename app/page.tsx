@@ -4,6 +4,7 @@ import { SignatureCoffees } from "@/components/signature-coffees";
 import { Pastries } from "@/components/pastries";
 import { SmartCombos } from "@/components/smart-combos";
 import { Experiences } from "@/components/experiences";
+import { BrandTimeline } from "@/components/brand-timeline";
 import { Membership } from "@/components/membership";
 import { OurStory } from "@/components/our-story";
 import { Footer } from "@/components/footer";
@@ -17,6 +18,7 @@ export default function Page() {
       <Pastries />
       <SmartCombos />
       <Experiences />
+      <BrandTimeline />
       <Membership />
       <OurStory />
       <Footer />
