@@ -1,68 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Award, Flame, HeartHandshake, Leaf } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-
-const milestones = [
-  {
-    year: "2016",
-    title: "El primer origen",
-    description:
-      "Comenzamos con una pequena barra de espresso y una obsesion clara: servir cafe trazable con tostado fresco y consistencia impecable.",
-    image: "/images/espresso.jpg",
-  },
-  {
-    year: "2018",
-    title: "Tostado de la casa",
-    description:
-      "Incorporamos tuestes en lotes pequenos para controlar curva, dulzor y cuerpo. Cada perfil se prueba en mesa sensorial antes de publicarse.",
-    image: "/images/coffee-beans.jpg",
-  },
-  {
-    year: "2021",
-    title: "Comunidad cafetera",
-    description:
-      "Abrimos catas y talleres para compartir tecnicas de extraccion, filtrados y maridaje con nuestra pasteleria artesanal.",
-    image: "/images/pastries.jpg",
-  },
-  {
-    year: "2025",
-    title: "Experiencia Cafe Aura",
-    description:
-      "Consolidamos una propuesta premium: baristas formados, menu estacional y un espacio pensado para pausar, conversar y disfrutar.",
-    image: "/images/hero-coffee.jpg",
-  },
-];
-
-const values = [
-  {
-    icon: Leaf,
-    title: "Origen responsable",
-    description:
-      "Trabajamos con fincas que priorizan practicas sostenibles y comercio justo.",
-  },
-  {
-    icon: Flame,
-    title: "Tueste preciso",
-    description:
-      "Ajustamos cada curva para resaltar notas naturales sin perder equilibrio en taza.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Servicio cercano",
-    description:
-      "Convertimos cada visita en una experiencia calida, cuidada y memorable.",
-  },
-  {
-    icon: Award,
-    title: "Calidad constante",
-    description:
-      "Estandares diarios de calibracion para ofrecer la misma excelencia todo el ano.",
-  },
-];
+import { Team } from "@/components/team";
+import { milestones, values } from "@/lib/cafe-data";
 
 export const metadata: Metadata = {
   title: "Nuestra Historia | Cafe Aura",
@@ -206,7 +150,11 @@ export default function HistoriaPage() {
                   style={{ animationDelay: `${index * 90}ms` }}
                 >
                   <span className="inline-flex rounded-full bg-accent/15 p-3 text-accent">
-                    <Icon className="h-5 w-5" />
+                    {typeof Icon === "function" ? (
+                      <Icon className="h-5 w-5" />
+                    ) : (
+                      <Icon className="h-5 w-5" />
+                    )}
                   </span>
                   <h3 className="mt-5 font-serif text-2xl font-semibold text-card-foreground">
                     {value.title}
@@ -250,6 +198,8 @@ export default function HistoriaPage() {
           </div>
         </div>
       </section>
+
+      <Team />
 
       <Footer />
     </main>

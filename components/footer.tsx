@@ -110,15 +110,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-
-      {/* Bottom bar */}
-      <div className="border-t border-primary-foreground/10">
-        <div className="mx-auto max-w-7xl px-6 py-5">
-          <p className="text-center text-xs text-primary-foreground/40">
-            {"© 2026 Cafe Aura. Todos los derechos reservados."}
-          </p>
-        </div>
-      </div>
     </footer>
   );
 }
