@@ -1,61 +1,6 @@
 "use client";
 
-import { Coffee, Leaf, Users, Award, Globe, Sparkles } from "lucide-react";
-
-interface TimelineEvent {
-  year: number;
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  highlight?: boolean;
-}
-
-const timelineEvents: TimelineEvent[] = [
-  {
-    year: 2018,
-    title: "El Comienzo",
-    description:
-      "Nació Café Aura con la visión de ofrecer café de especialidad sin compromisos. Primer local en el corazón de la ciudad.",
-    icon: <Coffee className="h-6 w-6" />,
-  },
-  {
-    year: 2019,
-    title: "Expansión Local",
-    description:
-      "Abrimos nuestra segunda sucursal y comenzamos a capacitar a nuestro equipo en técnicas de barista de clase mundial.",
-    icon: <Leaf className="h-6 w-6" />,
-  },
-  {
-    year: 2021,
-    title: "Comunidad",
-    description:
-      "Lanzamos nuestro programa de membresía y creamos espacios para que nuestros clientes se conviertan en embajadores de la marca.",
-    icon: <Users className="h-6 w-6" />,
-  },
-  {
-    year: 2023,
-    title: "Reconocimiento",
-    description:
-      "Ganamos el premio 'Mejor Café de Especialidad del Año' y expandimos nuestras opciones de granos de origen único.",
-    icon: <Award className="h-6 w-6" />,
-    highlight: true,
-  },
-  {
-    year: 2024,
-    title: "Sostenibilidad",
-    description:
-      "Iniciamos partnerships directas con fincas de café orgánico. Comprometidos con prácticas ecológicas en toda nuestra cadena.",
-    icon: <Globe className="h-6 w-6" />,
-  },
-  {
-    year: 2026,
-    title: "Presente & Futuro",
-    description:
-      "Hoy celebramos a todos nuestros clientes que hacen posible esta historia. Innovando cada día para ofrecer la mejor experiencia.",
-    icon: <Sparkles className="h-6 w-6" />,
-    highlight: true,
-  },
-];
+import { timelineEvents } from "@/lib/cafe-data";
 
 export function BrandTimeline() {
   return (
@@ -114,7 +59,7 @@ export function BrandTimeline() {
                               : "bg-muted text-foreground"
                           }`}
                         >
-                          {event.icon}
+                          <event.icon className="h-6 w-6" />
                         </div>
                         <span
                           className={`font-serif text-xl font-bold ${
@@ -162,7 +107,7 @@ export function BrandTimeline() {
                                   : "bg-muted text-foreground"
                               }`}
                             >
-                              {event.icon}
+                              <event.icon className="h-6 w-6" />
                             </div>
                             <span
                               className={`font-serif text-2xl font-bold ${
@@ -233,7 +178,7 @@ export function BrandTimeline() {
                                   : "bg-muted text-foreground"
                               }`}
                             >
-                              {event.icon}
+                              <event.icon className="h-6 w-6" />
                             </div>
                             <span
                               className={`font-serif text-2xl font-bold ${

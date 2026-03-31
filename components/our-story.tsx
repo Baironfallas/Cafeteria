@@ -1,12 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FadeInScroll } from "@/components/animations/fade-in-scroll";
-
-const stats = [
-  { value: "100%", label: "Organico" },
-  { value: "24h", label: "Tostado Fresco" },
-  { value: "50+", label: "Variedades" },
-];
+import { stats } from "@/lib/cafe-data";
 
 export function OurStory() {
   return (
