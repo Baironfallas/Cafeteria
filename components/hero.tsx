@@ -1,7 +1,30 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
 export function Hero() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8 },
+    },
+  };
+
   return (
     <section
       id="hero"
@@ -10,7 +33,12 @@ export function Hero() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           {/* Left — Copy */}
-          <div className="flex flex-col gap-6">
+          <motion.div
+            className="flex flex-col gap-6"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
               Premium Coffee House
             </p>
@@ -59,7 +87,7 @@ export function Hero() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right — Image */}
           <div className="relative">
