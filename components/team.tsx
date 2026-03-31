@@ -19,7 +19,8 @@ const teamMembers: TeamMember[] = [
     role: "Head Barista",
     specialty: "Espresso & Latte Art",
     bio: "Campeona nacional de café 2023. Experta en técnicas de extracción y perfeccionamiento de bebidas.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
     icon: <Award className="h-5 w-5" />,
   },
   {
@@ -27,7 +28,8 @@ const teamMembers: TeamMember[] = [
     role: "Coffee Roaster",
     specialty: "Tueste Artesanal",
     bio: "Tuesta cada lote con precisión. Especialista en perfiles de origen único y desarrollo de sabor.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
     icon: <Coffee className="h-5 w-5" />,
   },
   {
@@ -35,7 +37,8 @@ const teamMembers: TeamMember[] = [
     role: "Sommelier de Café",
     specialty: "Catas & Maridaje",
     bio: "Certificada en Q-Grader. Diseña experiencias de café y maridajes con nuestra pastelería.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
     icon: <Leaf className="h-5 w-5" />,
   },
   {
@@ -43,14 +46,18 @@ const teamMembers: TeamMember[] = [
     role: "Barista Customer",
     specialty: "Experiencia al Cliente",
     bio: "Experto en crear momentos memorables. Se especializa en personalizaciones y atención premium.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
     icon: <Coffee className="h-5 w-5" />,
   },
 ];
 
 export function Team() {
   return (
-    <section id="team" className="relative overflow-hidden bg-background py-20 md:py-28">
+    <section
+      id="team"
+      className="relative overflow-hidden bg-background py-20 md:py-28"
+    >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(200,169,110,0.08),transparent_50%)]" />
       <div className="pointer-events-none absolute -left-20 top-10 h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
       <div className="pointer-events-none absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
@@ -68,13 +75,12 @@ export function Team() {
             Nuestro Equipo
           </p>
           <h2 className="mt-3 font-serif text-4xl font-bold text-foreground md:text-5xl text-balance">
-            Expertos en{" "}
-            <em className="not-italic text-accent">Cada Taza</em>
+            Expertos en <em className="not-italic text-accent">Cada Taza</em>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
             Conoce a los baristas, tostadores y especialistas que transforman
-            cada grano en una experiencia memorable. Pasión, técnica y dedicación
-            en cada rol.
+            cada grano en una experiencia memorable. Pasión, técnica y
+            dedicación en cada rol.
           </p>
         </motion.div>
 
@@ -147,8 +153,8 @@ export function Team() {
           </h3>
           <p className="max-w-2xl mx-auto text-muted-foreground mb-6">
             Visítanos en Café Aura y disfruta de una conversación con nuestros
-            expertos. Cada miembro del equipo está listo para compartir su pasión
-            por el café.
+            expertos. Cada miembro del equipo está listo para compartir su
+            pasión por el café.
           </p>
           <a
             href="#contact"
