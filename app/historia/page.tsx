@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import { Team } from "@/components/team";
 import { milestones, values } from "@/lib/cafe-data";
 
 export const metadata: Metadata = {
@@ -197,6 +198,8 @@ export default function HistoriaPage() {
           </div>
         </div>
       </section>
+
+      <Team />
 
       <Footer />
     </main>
