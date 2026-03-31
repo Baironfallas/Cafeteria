@@ -149,7 +149,11 @@ export default function HistoriaPage() {
                   style={{ animationDelay: `${index * 90}ms` }}
                 >
                   <span className="inline-flex rounded-full bg-accent/15 p-3 text-accent">
-                    {typeof Icon === 'function' ? <Icon className="h-5 w-5" /> : <Icon className="h-5 w-5" />}
+                    {typeof Icon === "function" ? (
+                      <Icon className="h-5 w-5" />
+                    ) : (
+                      <Icon className="h-5 w-5" />
+                    )}
                   </span>
                   <h3 className="mt-5 font-serif text-2xl font-semibold text-card-foreground">
                     {value.title}
