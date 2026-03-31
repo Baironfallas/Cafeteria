@@ -58,7 +58,8 @@ export function PaymentMethods() {
             Paga de Tu Forma Preferida
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ofrecemos múltiples formas de pago seguras y convenientes para que disfrutes de nuestro café sin inconvenientes
+            Ofrecemos múltiples formas de pago seguras y convenientes para que
+            disfrutes de nuestro café sin inconvenientes
           </p>
         </motion.div>
 
@@ -79,7 +80,8 @@ export function PaymentMethods() {
               "bg-accent/15 border-accent/25 hover:bg-accent/25",
               "bg-accent/20 border-accent/30 hover:bg-accent/30",
             ];
-            const accentStyle = accentVariations[index % accentVariations.length];
+            const accentStyle =
+              accentVariations[index % accentVariations.length];
 
             return (
               <motion.div
@@ -88,8 +90,12 @@ export function PaymentMethods() {
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="perspective"
               >
-                <div className={`h-full rounded-2xl overflow-hidden p-0.5 bg-gradient-to-br from-border to-border/50`}>
-                  <Card className={`h-full flex flex-col items-center justify-center p-8 bg-card hover:shadow-2xl transition-all duration-400 group cursor-pointer border border-border/50 relative overflow-hidden ${accentStyle}`}>
+                <div
+                  className={`h-full rounded-2xl overflow-hidden p-0.5 bg-gradient-to-br from-border to-border/50`}
+                >
+                  <Card
+                    className={`h-full flex flex-col items-center justify-center p-8 bg-card hover:shadow-2xl transition-all duration-400 group cursor-pointer border border-border/50 relative overflow-hidden ${accentStyle}`}
+                  >
                     {/* Contenido */}
                     <motion.div
                       className="relative z-10 flex flex-col items-center justify-center h-full"
