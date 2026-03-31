@@ -25,10 +25,38 @@ export function Gallery() {
   ];
 
   const itemsToShow = isMobile ? 4 : 8;
+  
+  // Función para distribuir items de diferentes categorías
+  const getDistributedItems = () => {
+    const itemsByCategory = categories
+      .filter(cat => cat !== "Todos")
+      .reduce((acc, cat) => {
+        acc[cat] = galleryItems.filter(item => item.category === cat);
+        return acc;
+      }, {} as Record<string, GalleryItem[]>);
+
+    const distributed: GalleryItem[] = [];
+    let itemIndex = 0;
+
+    while (distributed.length < itemsToShow) {
+      for (const cat of Object.keys(itemsByCategory)) {
+        if (distributed.length >= itemsToShow) break;
+        if (itemsByCategory[cat][itemIndex]) {
+          distributed.push(itemsByCategory[cat][itemIndex]);
+        }
+      }
+      itemIndex++;
+    }
+
+    return distributed.slice(0, itemsToShow);
+  };
+
   const filteredItems =
     selectedCategory === "Todos"
-      ? galleryItems.slice(0, itemsToShow)
-      : galleryItems.filter((item) => item.category === selectedCategory);
+      ? getDistributedItems()
+      : galleryItems
+          .filter((item) => item.category === selectedCategory)
+          .slice(0, itemsToShow);
 
   const currentIndex = galleryItems.findIndex((item) => item.id === selectedId);
   const currentItem = galleryItems[currentIndex];
