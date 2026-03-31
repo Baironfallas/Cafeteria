@@ -25,15 +25,18 @@ export function Gallery() {
   ];
 
   const itemsToShow = isMobile ? 4 : 8;
-  
+
   // Función para distribuir items de diferentes categorías
   const getDistributedItems = () => {
     const itemsByCategory = categories
-      .filter(cat => cat !== "Todos")
-      .reduce((acc, cat) => {
-        acc[cat] = galleryItems.filter(item => item.category === cat);
-        return acc;
-      }, {} as Record<string, GalleryItem[]>);
+      .filter((cat) => cat !== "Todos")
+      .reduce(
+        (acc, cat) => {
+          acc[cat] = galleryItems.filter((item) => item.category === cat);
+          return acc;
+        },
+        {} as Record<string, GalleryItem[]>,
+      );
 
     const distributed: GalleryItem[] = [];
     let itemIndex = 0;
