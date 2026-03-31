@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero";
 import { SignatureCoffees } from "@/components/signature-coffees";
 import { Pastries } from "@/components/pastries";
 import { SmartCombos } from "@/components/smart-combos";
+import { Gallery } from "@/components/gallery";
 import { Experiences } from "@/components/experiences";
 import { BrandTimeline } from "@/components/brand-timeline";
 import { Membership } from "@/components/membership";
@@ -17,6 +18,7 @@ export default function Page() {
       <SignatureCoffees />
       <Pastries />
       <SmartCombos />
+      <Gallery />
       <OurStory />
       <BrandTimeline />
       <Experiences />
