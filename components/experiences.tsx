@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import {
   type CarouselApi,
@@ -83,7 +84,13 @@ export function Experiences() {
     <section id="experiences" className="relative bg-muted/30 py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
-        <div className="mb-12 text-center">
+        <motion.div
+          className="mb-12 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             Galería de Momentos
           </p>
@@ -93,7 +100,7 @@ export function Experiences() {
           <p className="mt-4 text-base text-muted-foreground">
             Descubre cómo Café Aura es parte de tus momentos especiales
           </p>
-        </div>
+        </motion.div>
 
         {/* Carousel */}
         <Carousel

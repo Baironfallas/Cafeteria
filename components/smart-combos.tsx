@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { Gift, Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
 
 type ComboItem = {
   id: string;
@@ -112,7 +113,13 @@ export function SmartCombos() {
 
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
-        <div className="mb-16 text-center">
+        <motion.div
+          className="mb-16 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/5 px-4 py-2">
             <Gift className="h-4 w-4 text-accent" />
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
@@ -127,7 +134,7 @@ export function SmartCombos() {
             Nuestros baristas curaron estas combinaciones perfas. Cada combo
             incluye un descuento especial de hasta 22%.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
           {/* Selector de combos */}

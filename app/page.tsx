@@ -17,10 +17,10 @@ export default function Page() {
       <SignatureCoffees />
       <Pastries />
       <SmartCombos />
-      <Experiences />
-      <BrandTimeline />
-      <Membership />
       <OurStory />
+      <BrandTimeline />
+      <Experiences />
+      <Membership />
       <Footer />
     </main>
   );

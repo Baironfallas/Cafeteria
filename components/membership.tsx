@@ -2,7 +2,7 @@
 
 import { Check, Sparkles } from "lucide-react";
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 const plans = [
   {
     name: "Esencial",
@@ -86,7 +86,13 @@ export function Membership() {
 
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
-        <div className="mb-14 text-center">
+        <motion.div
+          className="mb-14 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             Membresia Exclusiva
           </p>
@@ -126,7 +132,7 @@ export function Membership() {
           <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
             {isYearly ? "Ahorra 20% con facturacion anual" : "Sin permanencia"}
           </p>
-        </div>
+        </motion.div>
 
         {/* Plans */}
         <div className="grid gap-8 md:grid-cols-3">

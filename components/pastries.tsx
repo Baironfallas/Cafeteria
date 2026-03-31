@@ -2,6 +2,8 @@
 
 import * as React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 import {
   type CarouselApi,
@@ -120,7 +122,13 @@ export function Pastries() {
 
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
-        <div className="mb-14 text-center">
+        <motion.div
+          className="mb-14 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             Reposteria Artesanal
           </p>
@@ -131,7 +139,7 @@ export function Pastries() {
             Nuestra vitrina combina tecnicas de pasteleria fina con ingredientes
             de temporada para elevar cada sorbo con un bocado inolvidable.
           </p>
-        </div>
+        </motion.div>
 
         {/* Carousel */}
         <div className="relative mx-auto max-w-6xl">
