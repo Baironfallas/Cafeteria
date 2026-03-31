@@ -95,7 +95,7 @@ export function PaymentMethods() {
                   className={`h-full rounded-xl md:rounded-2xl overflow-hidden p-0.5 bg-gradient-to-br from-border to-border/50`}
                 >
                   <Card
-                    className={`h-full flex flex-col items-center justify-center p-4 md:p-8 bg-card hover:shadow-2xl transition-all duration-400 group cursor-pointer border border-border/50 relative overflow-hidden ${accentStyle}`}
+                    className={`h-full flex flex-col items-center justify-center p-3 md:p-6 bg-card hover:shadow-2xl transition-all duration-400 group cursor-pointer border border-border/50 relative overflow-hidden ${accentStyle}`}
                   >
                     {/* Contenido */}
                     <motion.div
@@ -103,13 +103,13 @@ export function PaymentMethods() {
                       whileHover={{ y: -5 }}
                     >
                       <motion.div
-                        className="p-3 md:p-5 bg-accent/20 border border-accent/40 rounded-xl md:rounded-2xl mb-3 md:mb-6 shadow-lg group-hover:shadow-2xl transition-all duration-300"
+                        className="p-2.5 md:p-4 bg-accent/20 border border-accent/40 rounded-xl md:rounded-2xl mb-2 md:mb-4 shadow-lg group-hover:shadow-2xl transition-all duration-300"
                         whileHover={{ scale: 1.1, rotate: 5 }}
                       >
                         <Icon className="w-5 h-5 md:w-8 md:h-8 text-accent" />
                       </motion.div>
 
-                      <h3 className="text-xs md:text-lg font-semibold text-foreground text-center mb-1 md:mb-2 group-hover:text-accent transition-colors duration-300">
+                      <h3 className="text-xs md:text-base font-semibold text-foreground text-center mb-1 md:mb-2 group-hover:text-accent transition-colors duration-300">
                         {method.name}
                       </h3>
 
@@ -119,7 +119,7 @@ export function PaymentMethods() {
 
                       {/* Badge animado */}
                       <motion.div
-                        className="mt-2 md:mt-4 inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        className="mt-1.5 md:mt-3 inline-flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileHover={{ scale: 1 }}
                       >
@@ -136,69 +136,6 @@ export function PaymentMethods() {
           })}
         </motion.div>
 
-        {/* Info Section - Mejorada */}
-        <motion.div
-          className="bg-card rounded-2xl md:rounded-3xl p-4 md:p-8 border border-accent/20 shadow-xl relative overflow-hidden"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          {/* Decoración de fondo */}
-          <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full blur-2xl" />
-
-          <div className="relative z-10">
-            <motion.h3
-              className="text-xl md:text-3xl font-serif font-bold text-foreground mb-3 md:mb-4"
-              whileInView={{ x: 0 }}
-              initial={{ x: -20, opacity: 0 }}
-              viewport={{ once: true }}
-            >
-              🛡️ Seguridad y Confianza
-            </motion.h3>
-
-            <div className="grid md:grid-cols-3 gap-3 md:gap-5">
-              {[
-                {
-                  emoji: "🔒",
-                  title: "100% Seguro",
-                  text: "Todos los pagos son procesados con encriptación SSL de nivel bancario",
-                },
-                {
-                  emoji: "✅",
-                  title: "Sin Comisiones",
-                  text: "El precio que ves es el que pagas, sin sorpresas ocultas",
-                },
-                {
-                  emoji: "⚡",
-                  title: "Procesos Rápidos",
-                  text: "Confirmación instantánea de tus transacciones en cualquier método",
-                },
-              ].map((item, idx) => (
-                <motion.div
-                  key={idx}
-                  className="flex gap-2 md:gap-3 items-start md:items-center"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                >
-                  <div className="text-lg md:text-3xl flex-shrink-0">
-                    {item.emoji}
-                  </div>
-                  <div className="flex flex-col justify-center">
-                    <h4 className="font-semibold text-foreground text-sm md:text-base leading-tight">
-                      {item.title}
-                    </h4>
-                    <p className="text-muted-foreground text-xs leading-snug">
-                      {item.text}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
 
         {/* CTA Button */}
         <motion.div
