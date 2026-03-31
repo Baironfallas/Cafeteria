@@ -8,7 +8,7 @@ import { useIsMobile } from "@/components/ui/use-mobile";
 import galleryData from "@/data/gallery.json";
 import { type GalleryItem } from "@/types/gallery";
 
-const galleryItems: GalleryItem[] = galleryData.items;
+const galleryItems: GalleryItem[] = galleryData.items as GalleryItem[];
 
 export function Gallery() {
   const [selectedId, setSelectedId] = useState<number | null>(null);
