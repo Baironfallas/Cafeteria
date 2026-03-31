@@ -373,69 +373,6 @@ export function MenuPage() {
           </div>
         </motion.div>
 
-        {/* Featured Coffee - Hero Product */}
-        <motion.div
-          className="mb-20 mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-        >
-          <div className="mb-8">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-accent">
-              ★ Destacado del Mes
-            </p>
-          </div>
-          {activeCategory === "all" || activeCategory === "coffee" ? (
-            <div className="rounded-3xl overflow-hidden border-2 border-accent/50 bg-gradient-to-br from-card/80 via-card/60 to-primary/5 p-8 md:p-12 shadow-2xl shadow-accent/10">
-              <div className="grid md:grid-cols-3 gap-12 items-center">
-                {/* Image */}
-                <div className="md:col-span-1">
-                  <div className="relative rounded-2xl overflow-hidden h-80 border-2 border-accent/30">
-                    <Image
-                      src={featuredCoffee.image || "/images/espresso.jpg"}
-                      alt={featuredCoffee.name}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-linear-to-t from-primary/40 via-transparent to-transparent" />
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="md:col-span-2">
-                  <div className="mb-4">
-                    <span className="inline-block px-4 py-1.5 rounded-full bg-accent text-accent-foreground text-xs font-bold uppercase tracking-wider">
-                      {featuredCoffee.badge}
-                    </span>
-                  </div>
-                  <h3 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
-                    {featuredCoffee.name}
-                  </h3>
-                  <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                    {featuredCoffee.description}
-                  </p>
-                  <div className="flex items-baseline gap-3 mb-8">
-                    <span className="text-sm text-muted-foreground/70 font-semibold">
-                      SOLO POR
-                    </span>
-                    <span className="font-serif text-5xl font-bold text-accent">
-                      ${featuredCoffee.price.toFixed(2)}
-                    </span>
-                  </div>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-8 py-4 bg-accent text-accent-foreground font-bold uppercase tracking-wide text-base rounded-xl shadow-xl shadow-accent/30 hover:shadow-2xl transition-all duration-300"
-                  >
-                    Probar Ahora
-                  </motion.button>
-                </div>
-              </div>
-            </div>
-          ) : null}
-        </motion.div>
-
         {/* Menu Grid */}
         <div className="mb-20">
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-accent mb-8">
