@@ -35,15 +35,16 @@ export function OurStory() {
                 <em className="not-italic text-accent">Un Viaje</em> de Pasion
               </h2>
               <p className="text-base leading-relaxed text-muted-foreground">
-                En Cafe Aura, el cafe no es solo una bebida — es una experiencia.
-                Nuestro viaje comenzo con una mision simple: obtener los mejores
-                granos de granjas sostenibles alrededor del mundo y tostarlos a la
-                perfeccion.
+                En Cafe Aura, el cafe no es solo una bebida — es una
+                experiencia. Nuestro viaje comenzo con una mision simple:
+                obtener los mejores granos de granjas sostenibles alrededor del
+                mundo y tostarlos a la perfeccion.
               </p>
               <p className="text-base leading-relaxed text-muted-foreground">
-                Creemos en el arte de hacer cafe. Cada lote es tostado en pequenas
-                cantidades para resaltar las caracteristicas unicas de su origen,
-                asegurando que cada taza que pruebes cuente una historia propia.
+                Creemos en el arte de hacer cafe. Cada lote es tostado en
+                pequenas cantidades para resaltar las caracteristicas unicas de
+                su origen, asegurando que cada taza que pruebes cuente una
+                historia propia.
               </p>
 
               {/* Stats */}
