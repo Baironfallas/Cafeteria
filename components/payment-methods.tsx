@@ -136,7 +136,6 @@ export function PaymentMethods() {
           })}
         </motion.div>
 
-
         {/* CTA Button */}
         <motion.div
           className="text-center mt-6 md:mt-8"
