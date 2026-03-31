@@ -114,3 +114,39 @@ export const values = [
       "Estándares diarios de calibración para ofrecer la misma excelencia todo el año.",
   },
 ];
+
+// Métodos de pago
+import { CreditCard, Wallet, Smartphone, DollarSign } from "lucide-react";
+
+export const paymentMethods = [
+  {
+    id: "credit-card",
+    name: "Tarjeta de Crédito",
+    icon: CreditCard,
+    description: "Visa, Mastercard, American Express",
+  },
+  {
+    id: "debit-card",
+    name: "Tarjeta de Débito",
+    icon: CreditCard,
+    description: "Débito bancario directo",
+  },
+  {
+    id: "digital-wallet",
+    name: "Billetera Digital",
+    icon: Wallet,
+    description: "PayPal, Google Pay, Apple Pay",
+  },
+  {
+    id: "mobile-payment",
+    name: "Transferencia Bancaria",
+    icon: Smartphone,
+    description: "Transferencia directa entre cuentas",
+  },
+  {
+    id: "cash",
+    name: "Efectivo",
+    icon: DollarSign,
+    description: "Pago en efectivo",
+  },
+];
